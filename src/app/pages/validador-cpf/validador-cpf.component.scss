@@ -1,0 +1,161 @@
+section{
+  background-color: #e4f9f2;
+  height: 80vh;
+  padding: 10px 20px;
+  p{
+    font-size: 16px;
+  }
+
+  .cpf-verificator{
+    margin-top: 5rem;
+    width: 100%;
+  }
+
+  input{
+    background-color: #fff;
+    border: 1px solid;
+   border-radius: 0;
+   outline: none;
+   height: 34px !important;
+    width: 40%;
+    margin-bottom: 0;
+    margin-right: 10px;
+    border-radius: 0.25rem;
+  }
+}
+
+.timeline{
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.li{
+  transition: all 200ms ease-in
+}
+
+
+.timestamp{
+  margin-bottom: 20px;
+  padding: 0px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 100;
+}
+
+.status{
+  display: flex;
+  justify-content: center;
+  border-top: 2px solid #D6DCE0;
+  position: relative;
+  width: 200px;
+  transition: all 200ms ease-in  ;
+  h4{
+    font-size: 16px;
+    margin-top: 10px;
+    color: #818385;
+  }
+
+  &:before{
+    content: '';
+    width: 25px;
+    height: 25px;
+    background-color: #c9cacc;
+    border-radius: 25px;
+    border: 1px solid #dddddd;
+    position: absolute;
+    top: -15px;
+    left: 42%;
+    transition: all 200ms ease-in
+  }
+}
+.li.complete{
+  .status{
+    border-top: 2px solid #c9cacc;
+  }
+    &:before{
+      background-color: #c9cacc;
+      border: none;
+      transition: all 200ms ease-in;
+          h4{
+             color: #c9cacc
+          }
+    }
+}
+
+.card-title{
+font-size: 18px;
+font-weight: bold;
+}
+
+.card-subtitle{
+  font-size: 12px;
+}
+
+.card-text .text-muted{
+  font-size: 14px;
+
+}
+
+.card-text{
+  margin-bottom: 0;
+}
+
+.info {
+  margin-bottom: 5px;
+}
+
+.account {
+  color: #007bff;
+  cursor: pointer;
+}
+
+.inputCpf {
+  width: 20% !important;
+}
+
+.cpfText {
+  width: 50%  ;
+}
+
+.is-invalid {
+  border-color: #ff0000 !important;
+}
+
+@media only screen and (max-width: 760px)  , only screen and (max-height: 700px) {
+  h2{
+    margin-bottom: 15px;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  section{
+    height: auto;
+    min-height: 80vh;
+  }
+
+  .cpf-verificator{
+    display: flex;
+    flex-direction: column;
+    align-items: center
+  }
+
+  .cpf-Input{
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+
+    input{
+      width: 100% !important;
+      margin: 10px 0;
+    }
+  }
+
+}
+

@@ -1,0 +1,14 @@
+{
+    "cpfs": [
+      { "id": 1,"cpf": "843.706.210-11", "nome": "Onur", "contaAplicacao": "123456-7", "contaCorrente": "987654-0" },
+      { "id": 2,"cpf": "417.761.440-82", "nome": "Gici", "contaAplicacao": "987654-0", "contaCorrente": "777777-7" },
+      { "id": 3,"cpf": "872.505.430-91", "nome": "Anurus", "contaAplicacao": "345897-2", "contaCorrente": "556346-3" },
+      { "id": 4,"cpf": "770.736.220-91", "nome": "Xyubin", "contaAplicacao": "123098-4", "contaCorrente": "375902-0" },
+      { "id": 5,"cpf": "659.130.640-46", "nome": "Vecene", "contaAplicacao": "375902-0", "contaCorrente": "987654-0" },
+      { "id": 6,"cpf": "202.982.670-71", "nome": "Goer", "contaAplicacao": "573395-1", "contaCorrente": "375902-0" },
+      { "id": 7,"cpf": "695.475.960-04", "nome": "Ulwidir", "contaAplicacao": "485694-0", "contaCorrente": "573395-1" },
+      { "id": 8,"cpf": "620.060.450-91", "nome": "Duerenring", "contaAplicacao": "123956-0", "contaCorrente": "485694-0" },
+      { "id": 9,"cpf": "198.328.470-01", "nome": "Vaywyode", "contaAplicacao": "507993-7", "contaCorrente": "123956-0" },
+      { "id": 10,"cpf": "182.801.940-29", "nome": "Gutin", "contaAplicacao": "777777-7", "contaCorrente": "888888-8" }
+    ]
+  }

@@ -1,0 +1,28 @@
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+    p{
+      color: #818385;
+    }
+    h1{
+      font-size: 24px;
+      margin-bottom: 0px;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+}
+
+.btn-outline-primary{
+  border-radius: 21px !important;
+  padding: 0 1rem;
+  font-size: 12px;
+  height: 28px;
+  margin: 0 10px;
+}
+
+.material-icons{
+  font-size: 32px;
+}
+

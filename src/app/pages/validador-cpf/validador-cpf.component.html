@@ -1,0 +1,100 @@
+<app-header-page></app-header-page>
+<section>
+  <!--TIMELINE-->
+  <ul class="timeline" id="timeline">
+    <li class="li complete">
+      <div class="status">
+        <h4> Inicio </h4>
+      </div>
+    </li>
+    <li class="li">
+      <div class="status">
+        <h4> Documentos </h4>
+      </div>
+    </li>
+    <li class="li">
+      <div class="status">
+        <h4> Dados Cadastrais </h4>
+      </div>
+    </li>
+    <li class="li">
+      <div class="status">
+        <h4> Admissão </h4>
+      </div>
+    </li>
+   </ul>
+
+   <!--INFO CPF-->
+   <div class="cpf-verificator">
+    <div class="cpfText">
+      <h2>Informe o CPF do futuro cooperado (a)</h2>
+      <span class="font-weight-light">Se necessário, voce podera duplicar uma conta existente ou pausar e retornar este cadastro futuramente.<br>
+      Digite apenas numeros (sem pontos ou traços).
+      </span>
+    </div>
+    <span class="font-weight-bold">CPF</span>
+    <div class="d-flex form-group cpf-Input">
+      <input type="text" placeholder="000.000.000-00" mask="000.000.000-00" class="pl-2 inputCpf" id="cpf" #cpf name="cpfValue"
+      [(ngModel)]="cpfValue" [ngClass]="{'is-invalid': !validarCPF(cpfValue) && cpfValue !=''}" (change)="checkCpf= validarCPF(cpfValue)">
+      <button type="button" class="btn btn-primary btn-sm" [disabled]="cpfVerificado === true && cpf.value == cpfClient.cpf" (click)="validarUser()">Consultar por CPF</button>
+    </div>
+  </div>
+
+  <!--INFO CARDS-->
+  <div class="cards d-flex mt-3" *ngIf="userValid">
+    <div class="card mr-3" style="width: 18rem;">
+      <div class="card-body">
+      <h5 class="card-title">Situação Cadastral do CPF</h5>
+      <h6 class="card-subtitle mb-2 text-muted">Consulta na Receita Federal</h6>
+      <div class="d-flex align-items-center">
+        <i class="small material-icons mr-2">person</i>
+        <div>
+            <p class="card-text text-muted">Nome</p>
+      <p class="card-text info"> {{cpfClient.nome}}</p>
+        </div>
+      </div>
+      <div class="d-flex align-items-center">
+      <i class="small material-icons mr-2" style="color: green;">check</i>
+      <div>
+       <p class="card-text text-muted">Situação do CPF</p>
+      <p class="card-text info">Regular</p>
+      </div>
+      </div>
+    </div>
+  </div>
+  <div class="card mr-3" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">Conta Aplicação</h5>
+      <h6 class="card-subtitle mb-2 text-muted">Cooperativa ViaCredi</h6>
+        <div class="d-flex align-items-center">
+          <i class="small material-icons mr-2">payment</i>
+        <div>
+      <p class="card-text text-muted">Numero da Conta</p>
+      <p class="card-text info">{{cpfClient.contaAplicacao}}</p>
+      </div>
+      </div>
+      <p class="card-text info account mt-3">Duplicar conta</p>
+    </div>
+
+  </div>
+  <div class="card mr-3" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">Conta Corrente</h5>
+      <h6 class="card-subtitle mb-2 text-muted">Cooperativa ViaCredi</h6>
+      <div class="d-flex align-items-center">
+        <i class="small material-icons mr-2">payment</i>
+        <div>
+      <p class="card-text text-muted">Numero da Conta</p>
+      <p class="card-text info">{{cpfClient.contaCorrente}}</p>
+    </div>
+    </div>
+    <p class="card-text info account mt-3">Duplicar conta</p>
+    </div>
+  </div>
+</div>
+</section>
+<app-footer-pages
+ [userValid]="userValid"
+ (clear) ="clear($event)"
+ ></app-footer-pages>
+
